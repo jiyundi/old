@@ -159,7 +159,7 @@ MAX-WIDTH 800
 	.ca-menu li{ width: 250px;}
  }
 @media screen and (min-width: 600px) and (max-width: 800px) {  
- .ei-title h2,.ei-title h3 {}
+ .ei-title h2,.ei-title h3 {text-align: center;}
 }
  /************************************************************************************
 CAROUSEL
@@ -224,15 +224,15 @@ MAX-WITH 480
 	.name {display:block;}
 	.noleftmarg {padding:0px !important;}	
 	.logo { margin-top: 20px;margin-bottom:0px;}
-	.ei-slider {height:260px;}
-	.responsiveslide {margin-left: 0px !important;width:100% !Important;height: 200px !important;}
+	.ei-slider {max-height:200px;}
+	.responsiveslide {margin-left: 0px !important;height: auto !important;width:100% !Important;}
 	.newsmargin{margin-left:0px;}
 	.floatright {float:none;}
 	#footer h1 {padding-top:20px;}
 	.back-top, .back-top a, .slide{display:none;}
 	.left { float: none }	
 	.right { float: right; }
-	.ei-title h2,.ei-title h3 {}
+	.ei-title h2,.ei-title h3 {text-align: center;padding-top: 50px}
 	#testimonials {height:260px !important;}
     #testimonials blockquote{height:260px !important;}
 	.noslide h3 {padding:0px;}
