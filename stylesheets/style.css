@@ -2,7 +2,7 @@
 /* Global Reset & Standards ---------------------- */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html { font-size: 62.5% }
-body { font-family: 'product_sansregular', DroidSansRegular, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; color: #666; position: relative; -webkit-font-smoothing: antialiased; }
+body { font-family: 'bahnschrift', DroidSansRegular, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; color: #666; position: relative; -webkit-font-smoothing: antialiased; }
 /* Links ---------------------- */
 a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
 a:hover { color: #2795b6 }
@@ -17,11 +17,11 @@ img {border:0px;}
 figure { margin: 0 }
 /* Base Type Styles Using Modular Scale ---------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td { margin: 0; padding: 0; font-size: 13px; direction: ltr; }
-p { font-size: 13px; line-height: 1.6; margin-bottom: 15px; }
+p { font-size: 13px; line-height: 1.6; margin-bottom: 15px; margin-top: 15px; }
 p.lead { font-size: 17.5px; line-height: 1.6; margin-bottom: 17px; }
 ::-webkit-input-placeholder { font-size: 12px }
 aside p { font-size: 13px; line-height: 1.35; font-style: italic; }
-h1,h2,h3,h4,h5,h6 { font-family: 'product_sansregular', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; color: #222222; text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px; margin-top: 14px; }
+h1,h2,h3,h4,h5,h6 { font-family: 'bahnschrift', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Monaco', 'Courier New', 'monospace', 'product-sans-regular-2-webfont', "Helvetica Neue", "Helvetica", 'Helvetica', 'Arial', 'sans-serif'; color: #222222; text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px;}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; }
 h1 { font-size: 40px }
 h2 { font-size: 37px }
@@ -34,7 +34,10 @@ hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px
 em,i { font-style: italic; line-height: inherit; }
 strong,b { font-weight: bold; line-height: inherit; }
 small { font-size: 60%; line-height: inherit; }
-code { font-weight: bold; background: #ffff99; }
+code {
+	font-weight: bold;
+	background: #ffffff;
+}
 /* Lists ---------------------- */
 ul,ol { font-size: 14px; line-height: 1.6; margin-bottom: 17px; list-style-position: inside; }
 ul li ul,ul li ol { margin-left: 20px; margin-bottom: 0; }
@@ -140,54 +143,122 @@ form.custom div.custom.dropdown ul li.selected:hover:after { color: #000 }
 form.custom div.custom.dropdown ul.show { display: block }
 form.custom .custom.disabled { background-color: #ddd }
 
+
+
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/* Self defined widgets */
+/**/
 @font-face {
-    font-family: 'product_sansbold';
+    font-family: 'product-sans-bold-3-webfont';
     src: url('fonts/product-sans-bold-3-webfont.woff2') format('woff2'),
          url('fonts/product-sans-bold-3-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 @font-face {
-    font-family: 'product_sansbold_italic';
+    font-family: 'product-sans-bold-italic-5-webfont';
     src: url('fonts/product-sans-bold-italic-5-webfont.woff2') format('woff2'),
          url('fonts/product-sans-bold-italic-5-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 @font-face {
-    font-family: 'product_sansitalic';
+    font-family: 'product-sans-italic-4-webfont';
     src: url('fonts/product-sans-italic-4-webfont.woff2') format('woff2'),
          url('fonts/product-sans-italic-4-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 @font-face {
-    font-family: 'product_sansregular';
+    font-family: 'product-sans-regular-2-webfont';
     src: url('fonts/product-sans-regular-2-webfont.woff2') format('woff2'),
          url('fonts/product-sans-regular-2-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
+@font-face {
+    font-family: 'bahnschrift';
+    src: url('fonts/bahnschrift.woff2') format('woff2'),
+         url('fonts/bahnschrift.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'consola';
+    src: url('fonts/consola.woff2') format('woff2'),
+         url('fonts/consola.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'consolab';
+    src: url('fonts/consolab.woff2') format('woff2'),
+         url('fonts/consolab.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'hywenhei85w';
+    src: url('fonts/HYWenHei-85W(Heavy)-jp-JP') format('woff'), url('fonts/hywenhei-85w-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'genshin';
+    src: url('fonts/Default_SC-85W.woff2') format('woff2'),
+        url('fonts/Default_SC-85W.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 bold {  /* or .call em, but you should aim for consistency in your styling */
-    font-family: 'product_sansbold';
+    font-family: 'product-sans-bold-3-webfont';
     font-size: 100%;
 }
-
 boit {  /* or .call em, but you should aim for consistency in your styling */
-    font-family: 'product_sansbold_italic';
+    font-family: 'product-sans-bold-italic-5-webfont';
     font-size: 100%;
 }
+/**/
+/**/
+/**/
+/**/
+/**/
+/* Self defined widgets */
+/**/
+/* ---- 1 ---- */
+#subheader {  position: relative; padding: 25px 50px; position: relative; }
+#subheader p { font-size: 1.4em; margin-top: 20px; margin-bottom: 20px;}
+#subheader a { color: #fff; text-decoration: none; }
+#subheader a:hover { text-decoration: none; color: #fff; }
+.subheadertext {padding:40px 0 60px !important;}
+/**/
+/* ---- 2 ---- */
+#codeblock p { font-family: 'Consolas'; font-size: 14px; line-height: 1.5em; margin-left: 12px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px;}
+/**/
+/* ---- 3 ---- */
+#codeblockresult p { font-family: 'Consolas'; font-size: 14px; line-height: 1.5em; margin-left: 12px; margin-right: 40px; margin-top: 19px; margin-bottom: 19px;}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+
+
+
 
 
 /* Correct FF custom dropdown height */
@@ -818,12 +889,7 @@ a:focus { outline: none }
 .btn-slide { text-align: center; width: 20px; height: 10px; padding: 10px 10px 0 0; margin: 0 auto; display: block; font: bold 120%/100% Arial, Helvetica, sans-serif; color: #fff; text-decoration: none; float: right; }
 .pics { float: left; margin-right: 10px; }
 .infotext { margin-top: 7px }
-#subheader {  position: relative; padding: 25px 50px; position: relative; }
-#subheader p { font-size: 1.4em; margin-top: 20px; margin-bottom: 20px;}
-#subheader a { color: #fff; text-decoration: none; }
-#subheader a:hover { text-decoration: none; color: #fff; }
-.subheadertext {padding:40px 0 60px !important;}
-.bread { font-family: 'product_sansregular', DroidSansRegular; margin-top: 8px; font-size: 16px !important; }
+.bread { font-family: 'product_sans_regular', DroidSansRegular; margin-top: 8px; font-size: 16px !important; }
 .topborder { border-top: 4px solid }
 .header { height: 80px }
 .logo { margin-top: 34px;margin-bottom: 30px; }
@@ -831,7 +897,7 @@ a:focus { outline: none }
 .hr { height: 36px }
 .name { display: none }
 .sidebartitle { margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
-.sectiontitle { background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; background-position: center; margin: 5px 0 25px; min-height: 20px; }
+.sectiontitle { background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; background-position: center; margin: 35px 0 25px; min-height: 20px; }
 .sectiontitle h4 { font-size: 23px; background:#fff; display: inline; padding-right: 10px; padding-left: 10px; }
 .centersectiontitle { background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; background-position: center; margin: 10px 0 25px; min-height: 20px; text-align: center; }
 .centersectiontitle h4 { font-size: 23px; background: #fff; display: inline; padding-right: 10px; padding-left: 10px; }
@@ -1012,7 +1078,7 @@ a.tags, .tags a {color:#fff;}
     -o-transition: all 200ms linear;
     -ms-transition: all 200ms linear;
     transition: all 200ms linear;
-	font-family:'product_sansregular', DroidSansRegular;
+	font-family:'bahnschrift', DroidSansRegular;
 }
 .ca-menu li:hover{
     background-color: rgba(0,0,0,1);
@@ -1118,24 +1184,26 @@ a.tags, .tags a {color:#fff;}
 }
 .ei-title{
 	position: absolute;	
-	top: 40%;
+	top: 75%;
 }
 .ei-title h2, .ei-title h3{
 	text-align: left;
+	font-family: 'hywenhei85w';
+	font-feature-settings: normal;
 }
 .ei-title h2{
-	font-size: 30px;
-	line-height: 80px;	
+	font-size: 20px;
+	line-height: 50px;	
 	color: #fff;
 	padding: 0 50px;
 }
 .ei-title h3{
 font-size: 20px;
-line-height: 40px;
+line-height: 50px;
 text-transform: uppercase;
 color: #fff;
 background: #333;
-padding: 0px 10px;
+padding: 0px 50px;
 }
 .ei-slider-thumbs{
 	height: 13px;
