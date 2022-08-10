@@ -1,0 +1,36 @@
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+/* Self defined widgets */
+/**/
+/* ---- 2 ---- */
+.codeblock{background: #CCCCCC; order-top: 1px solid #BFBFBF; color: #000000;font-family: 'Consolas'}
+.codeblock a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
+.codeblock a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
+/**/
+/* ---- 3 ---- */
+.codeblockresult{border-style: solid; border-width: 1px; border-color: #CCCCCC; color: #000000; font-family: 'Consolas'}
+.codeblockresult a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
+.codeblockresult a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
+/**/
+/* ---- 4 ---- */
+.texttablerowheader 
+	{	width: 20%;
+		background: #CCCCCC; 
+		color: #000000;
+		font-family: 'Consolas'; 
+		margin-bottom: 15px; 
+		margin-top: 15px;
+		text-align: center;
+		float: left; 
+		min-height: 1px; 
+		padding: 0 15px; 
+		position: relative;
+}
+.texttablerowheader a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
+.texttablerowheader a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
+/**/
