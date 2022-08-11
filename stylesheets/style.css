@@ -217,11 +217,15 @@ form.custom .custom.disabled { background-color: #ddd }
     font-display: swap;
 }
 bold {  /* or .call em, but you should aim for consistency in your styling */
-    font-family: 'product-sans-bold-3-webfont';
+    font-family: 'bahnschrift';
+	font-weight: normal;
+    font-style: normal;
     font-size: 100%;
 }
 boit {  /* or .call em, but you should aim for consistency in your styling */
-    font-family: 'product-sans-bold-italic-5-webfont';
+    font-family: 'bahnschrift';
+	font-weight: bold;
+    font-style: italic;
     font-size: 100%;
 }
 /**/
