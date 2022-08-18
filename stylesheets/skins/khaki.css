@@ -28,12 +28,7 @@ div.alert-box.default { background-color: #a0a774;}
 /**/
 /**/
 /* Self defined widgets */
-/**/
-/* ---- 1 ---- */
-#textbox{background: #fff59d;border-top: 1px solid #fff59d; color: #fff;}
-#textbox a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
-#textbox a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
-/**/
+
 /**/
 /**/
 /**/
