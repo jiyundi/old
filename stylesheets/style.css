@@ -249,6 +249,8 @@ boit {  /* or .call em, but you should aim for consistency in your styling */
 #codeblockresult p { font-family: 'Consolas'; font-size: 14px; line-height: 1.5em; margin-left: 12px; margin-right: 40px; margin-top: 19px; margin-bottom: 19px;}
 /**/
 /**/
+/* ---- 4 ---- */
+#codeblocknote p { font-family: 'Consolas'; font-size: 14px; line-height: 1.5em; margin-left: 12px; margin-right: 40px; margin-top: 19px; margin-bottom: 19px;}/**/
 /**/
 /**/
 /**/
