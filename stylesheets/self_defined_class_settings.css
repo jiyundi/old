@@ -10,12 +10,12 @@
 	font-size: 18px;
 }
 /* ---- 2 ---- */
-.codeblock{background: #CCCCCC; order-top: 1px solid #BFBFBF; color: #000000;font-family: 'Consolas'}
+.codeblock{border-style: solid; border-width: 1px; border-color: #CCCCCC; background: #f2f2f2; order-top: 1px solid #BFBFBF; color: #000000;font-family: 'Consolas'; padding-left: 20px}
 .codeblock a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
 .codeblock a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
 /**/
 /* ---- 3 ---- */
-.codeblockresult{border-style: solid; border-width: 1px; border-color: #CCCCCC; color: #000000; font-family: 'Consolas'}
+.codeblockresult{border-style: solid; border-width: 1px; border-color: #CCCCCC; color: #000000; font-family: 'Consolas'; padding-left: 20px}
 .codeblockresult a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
 .codeblockresult a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
 /**/
