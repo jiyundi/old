@@ -17,6 +17,8 @@ img {border:0px;}
 figure { margin: 0 }
 /* Base Type Styles Using Modular Scale ---------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td { margin: 0; padding: 0; font-size: 13px; direction: ltr; }
+h4 a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
+h4 a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
 p { font-size: 13px; line-height: 1.6; margin-bottom: 15px; margin-top: 15px; }
 p.lead { font-size: 17.5px; line-height: 1.6; margin-bottom: 17px; }
 ::-webkit-input-placeholder { font-size: 12px }

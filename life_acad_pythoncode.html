@@ -113,7 +113,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<div class="sectiontitle">
-			<h4>Print - Format</h4>
+			<h4>Print - <a href="https://pyformat.info/#simple">Format</a></h4>
 		</div>
 	</div>
 </div>	
@@ -125,6 +125,7 @@
 				<code class="python"># Placeholder while using in html
 "{:5.2f}".format(d=1.23)
 "{:5.2f}".format(d=-1.23)
+'{:4d}'.format(d=42)
 				</code>
 				</pre>
 			</p>
@@ -133,8 +134,9 @@
 	<div class="five columns">
 		<div class="codeblockresult">
 			<p class="text-left">
-				&nbsp;1.23 (5 digits, 2-decimal float)<br>
-				     -1.23 (5 digits, 2-decimal float)<br>
+				_1.23 (5 digits, 2-decimal float)<br>
+				      -1.23 (5 digits, 2-decimal float)<br>
+				__42  (two spaces at front)
 			</p>
 		</div>
 	</div>
