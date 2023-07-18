@@ -3,8 +3,8 @@
 ul.flyout li a:hover, .nav-bar li ul li a:hover {color:#a0a774;}
 .flyout {border-top:2px solid #a0a774;}
 .sectiontitle {border-left: 4px solid #a0a774;}
-::-moz-selection{background:#a0a774;color:#fff;}
-::selection{background:#a0a774;color:#fff;}
+::-moz-selection{background:#676d46;color:#fff;}
+::selection{background:#676d46;color:#fff;}
 .ca-menu li:hover .ca-main {color: #FFFFFF;}
 .topborder { border-top:4px solid #a0a774;}
 #subheader{background: #a0a774;border-top: 1px solid #a0a774; color: #fff;}
