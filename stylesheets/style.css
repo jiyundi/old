@@ -2,7 +2,12 @@
 /* Global Reset & Standards ---------------------- */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html { font-size: 62.5% }
-body { font-family: 'bahnschrift', DroidSansRegular, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 20px; color: #666; position: relative; -webkit-font-smoothing: antialiased; min-width: 684px}
+body { 
+	font-family: 'HarmonyOS', 'bahnschrift', DroidSansRegular, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+	font-size: 16px; 
+	color: #666; 
+	position: relative; 
+	min-width: 684px}
 /* Links ---------------------- */
 a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
 a:hover { color: #2795b6 }
@@ -19,11 +24,17 @@ figure { margin: 0 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td { margin: 0; padding: 0; font-size: 16px; direction: ltr; }
 h4 a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
 h4 a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
-p { font-size: 13px; line-height: 1.6; margin-bottom: 15px; margin-top: 15px; }
+p { font-size: 16px; line-height: 1.6; margin-bottom: 15px; margin-top: 15px; }
 p.lead { font-size: 17.5px; line-height: 1.6; margin-bottom: 17px; }
 ::-webkit-input-placeholder { font-size: 12px }
 aside p { font-size: 13px; line-height: 1.35; font-style: italic; }
-h1,h2,h3,h4,h5,h6 { font-family: 'bahnschrift', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Monaco', 'Courier New', 'monospace', 'product-sans-regular-2-webfont', "Helvetica Neue", "Helvetica", 'Helvetica', 'Arial', 'sans-serif'; color: #222222; text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px;}
+h1,h2,h3,h4,h5,h6 { 
+	font-style: normal;
+	font-family: 'StarRail', 'bahnschrift', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Monaco', 'Courier New', 'monospace', 'product-sans-regular-2-webfont', "Helvetica Neue", "Helvetica", 'Helvetica', 'Arial', 'sans-serif'; 
+	color: #222222; 
+	text-rendering: optimizeLegibility; 
+	line-height: 1.1; 
+	margin-bottom: 0px;}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; }
 h1 { font-size: 40px }
 h2 { font-size: 37px }
@@ -209,9 +220,10 @@ form.custom .custom.disabled { background-color: #ddd }
     font-weight: normal;
     font-style: normal;
 }
+/*
 @font-face {
     font-family: 'hywenhei85w';
-    src: url('fonts/HYWenHei-85W(Heavy)-jp-JP') format('woff'), url('fonts/hywenhei-85w-webfont.woff2') format('woff2');
+    src: url('fonts/HYWenHei-85W(Heavy)-jp-JP.woff') format('woff'), url('fonts/hywenhei-85w-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -223,9 +235,21 @@ form.custom .custom.disabled { background-color: #ddd }
     font-style: normal;
     font-display: swap;
 }
+*/
+@font-face {
+    font-family: 'HarmonyOS';
+    src: url('fonts/HarmonyOS_Sans_SC_Regular.woff') format('woff'), url('fonts/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StarRail';
+    src: url('fonts/HYRunYuan-65W.woff') format('woff'), url('fonts/HYRunYuan-65W.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 bold {  /* or .call em, but you should aim for consistency in your styling */
-    font-family: 'bahnschrift';
-	font-weight: normal;
+    font-weight: bold;
     font-style: normal;
     font-size: 100%;
 }
@@ -243,7 +267,7 @@ boit {  /* or .call em, but you should aim for consistency in your styling */
 /* Self defined widgets */
 /**/
 /* ---- 1 ---- */
-#subheader {  position: relative; padding: 25px 50px; position: relative; }
+#subheader {  position: relative; padding: 25px 50px;}
 #subheader p { font-size: 1.4em; margin-top: 20px; margin-bottom: 20px;}
 #subheader a { color: #fff; text-decoration: none; }
 #subheader a:hover { text-decoration: none; color: #fff; }
@@ -279,7 +303,7 @@ boit {  /* or .call em, but you should aim for consistency in your styling */
 }
 .lt-ie9 form.custom div.custom.dropdown a.selector { height: 30px }
 /* The Grid ---------------------- */
-.row { width: 1006px;  min-width: 500px; max-width: 100%; margin: 0 auto; }
+.row { width: 1024px;  min-width: 500px; max-width: 100%; margin: 0 auto; }
 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
 .row.collapse .column,
 .row.collapse .columns { padding: 0 }
@@ -512,7 +536,7 @@ div.button-bar { overflow: hidden }
 div.button-bar ul.button-group { float: left; margin-right: 8px; }
 div.button-bar ul.button-group:last-child { margin-left: 0 }
 /* Requires globals.css */
-.nav-bar { height: 40px; margin-top: 28px}
+.nav-bar { height: 5%; }
 .nav-bar > li { float: left; display: block; position: relative;}
 .nav-bar > li:first-child { background: none }
 .nav-bar > li:last-child { }
@@ -792,7 +816,7 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
 
 
 /* PORTOFOLIO */
-#portofolio h5 {padding-top:10px; font-family: 'bahnschrift','genshin';}
+#portofolio h5 {padding-top:10px; }
 #filters { margin-bottom: 10px; padding: 0; }
 #filters li { float: left; list-style: none; margin-right: 5px; margin-bottom: 10px; }
 #filters li a { padding: 6px 15px 2px 15px; text-decoration: none; font-size: 12px; }
@@ -831,12 +855,14 @@ a.projectdetail { background: #33877d; color: #fff; padding: 7px 7px 6px 7px; fo
 
 /* CONTENT ---------------------- */
 .nomargin { margin-bottom: 0px !important }
-.noleftmargin { margin-left: 0px; padding-left: 0px; }
+.noleftmargin { margin-right: 0px; padding-left: 0px; }
 .floatright,.right { float: right }
 .left { float: left }
 .text-left,.leftalign { text-align: left }
 .text-right { text-align: right }
-.text-center { text-align: center }
+.text-center { 
+	text-align: center; font-family: StarRail;
+}
 .text-center a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
 .text-center a:hover { text-decoration: none; color: #62a3ff; text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink-mouse-over*/
 .hide { display: none }
@@ -851,13 +877,25 @@ a:focus { outline: none }
 .bread { font-family: 'product_sans_regular', DroidSansRegular; margin-top: 8px; font-size: 16px !important; }
 .topborder { border-top: 4px solid }
 .header { height: 80px }
-.logo { margin-top: 34px;margin-bottom: 34px; }
+.logo { margin-top: 30px; margin-bottom: 30px; }
 .logo h4 { font-size: 27px }
+.logo h4 a { color: rgba(0, 0, 0, 1.0); text-decoration-line: none; }
 .hr { height: 36px }
 .name { display: none }
 .sidebartitle { margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
-.sectiontitle { background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; background-position: center; margin: 35px 0 25px; min-height: 20px; }
-.sectiontitle h4 { font-size: 23px; background:#FFFFFF; display: inline; padding-right: 10px; padding-left: 10px; }
+.sectiontitle { 
+	background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; 
+	background-position: center; 
+	margin: 35px 0 25px; 
+	min-height: 20px; 
+	font-family: StarRail;}
+.sectiontitle h4 { 
+	font-size: 23px; 
+	background:#FFFFFF; 
+	display: inline; 
+	padding-right: 10px; 
+	padding-left: 10px; 
+	font-family: StarRail;}
 .centersectiontitle { background: url(../images/dots.gif) repeat-x scroll 0 0 transparent; background-position: center; margin: 10px 0 25px; min-height: 20px; text-align: center; }
 .centersectiontitle h4 { font-size: 23px; background: #fff; display: inline; padding-right: 10px; padding-left: 10px; }
 .wrappic { border: 1px solid #CCCCCC; padding: 2px; }
@@ -1108,7 +1146,7 @@ a.tags, .tags a {color:#fff;}
 }
 .ei-slider-large{
 	height: 100%;
-	position:relative;
+	position: relative;
 	overflow: hidden;
 }
 .ei-slider-large li{
@@ -1124,25 +1162,25 @@ a.tags, .tags a {color:#fff;}
 }
 .ei-title{
 	position: absolute;	
-	top: 75%;
+	bottom: 0%;
 }
 .ei-title h2, .ei-title h3{
 	text-align: left;
-	font-family: 'hywenhei85w';
+	font-family: 'StarRail';
 	font-feature-settings: normal;
 }
 .ei-title h2{
-	font-size: 20px;
-	line-height: 50px;	
+	font-size: 18px;
+	line-height: 40px;	
 	color: #fff;
-	padding: 0 50px;
+	padding: 0 15px;
 }
 .ei-title h3{
-font-size: 20px;
-line-height: 50px;
-color: #fff;
-background: #333;
-padding: 0px 50px;
+	font-size: 12px;
+	line-height: 30px;
+	color: rgba(255,255,255,0.50);
+	background: #333;
+	padding: 0px 15px;
 }
 .ei-slider-thumbs{
 	height: 13px;

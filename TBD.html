@@ -23,43 +23,10 @@
   <![endif]-->
 </head>
 <body>
-<!-- HIDDEN PANEL 
-================================================== -->
-<div id="panel">
-	<div class="row">
-		<div class="twelve columns">
-			<img src="images/settings.png" class="pics" alt="info">
-			<div class="infotext">
-				 Last Updated: Jul 6, 2022
-			</div>
-		</div>
-	</div>
-</div>
-<p class="slide">
-	<a href="#" class="btn-slide"></a>
-</p>
-<!-- HEADER
-================================================== -->
-<div class="row">
-	<div class="headerlogo four columns">
-		<div class="logo">
-			<a href="index.html">
-			<h4>Jiyun Di</h4>
-			</a>
-		</div>
-	</div>
-	<div class="headermenu eight columns noleftmarg">
-		<nav id="nav-wrap">
-		<ul id="main-menu" class="nav-bar sf-menu">
-			<li class="current">
-			<a href="index.html">Home/主页</a>
-			</li>
-		</ul>
-		</nav>
-	</div>
-</div>
-<div class="clear">
-</div>
+
+<!-- Include header -->
+<div id="header"></div>
+
 <!-- SLIDER 
 ================================================== -->
 <div id="ei-slider" class="ei-slider">
@@ -84,23 +51,9 @@
 		</div>
 	</div>
 </div>
-<!-- FOOOTER 
-================================================== -->
+
+<!-- Include footer -->
 <div id="footer">
-	<footer class="row">
-	<p class="back-top floatright">
-		<a href="#top"><span></span></a>
-	</p>
-	<div style="margin-left:15px;">
-		<h1>Contact / 联系方式</h1>
-		<p>&nbsp;</p>
-		<p><strong>E-mail / 邮件:</strong> jiyundi@email.arizona.edu</p>
-		<p><strong>Communication Address:</strong> Steward Observatory, 933 N Cherry Ave, Tucson, AZ 85719, USA</p>
-		<p><strong>通讯地址：</strong>美国亚利桑那州图森市 Cherry北路933号 史都华天文台 邮政编码：85719</p>
-		<p><strong>Phone / 手机:</strong> +1 (520) 304-7366</p>
-		<p><strong>WeChat / 微信:</strong> DI_Jiyun1998</p>
-	</div>
-	</footer>
 </div>
 <div class="copyright">
 	<div class="row">
@@ -112,9 +65,27 @@
 		</div>
 	</div>
 </div>
+
 <!-- JAVASCRIPTS 
 ================================================== -->
 <!-- Javascript files placed here for faster loading -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script>
+    // Load and render header template
+    fetch('website_header.html')
+        .then(response => response.text())
+        .then(template => {
+            const headerTemplate = Handlebars.compile(template);
+            document.getElementById('header').innerHTML = headerTemplate();
+        });
+    // Load and render footer template
+    fetch('website_footer.html')
+        .then(response => response.text())
+        .then(template => {
+            const footerTemplate = Handlebars.compile(template);
+            document.getElementById('footer').innerHTML = footerTemplate();
+        });
+</script>
 <script src="javascripts/foundation.min.js"></script>   
 <script src="javascripts/jquery.easing.1.3.js"></script>
 <script src="javascripts/elasticslideshow.js"></script>
@@ -127,5 +98,7 @@
 <script src="javascripts/hoverIntent.js"></script>
 <script src="javascripts/superfish.js"></script>
 <script src="javascripts/responsivemenu.js"></script>
+
+
 </body>
 </html>

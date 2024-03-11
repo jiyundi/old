@@ -11,6 +11,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width"/>
     <title>Jiyun Di's Personal Webpage</title>
+    <link rel="icon" href="images/favicon.svg">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/skins/khaki.css">
     <link rel="stylesheet" href="stylesheets/responsive.css">
@@ -19,62 +20,8 @@
 <body>
 
 
-<!-- USE Python, import external html files         -->
-<!-- Before every edition of your website,          -->
-<!-- let Python to re-run and re-load this section  -->
-<!-- DO NOT CHANGE THE FOLLOWING Python IDENTIFIERS -->
-
-<!-- HIDDEN PANEL 
-================================================== -->
-<div id="panel">
-	<div class="row">
-		<div class="twelve columns">
-			<img src="images/settings.png" class="pics" alt="info">
-			<div class="infotext">
-				 "Always keep your sincere. Be kind." &#8213; at the age of 25...
-			</div>
-		</div>
-	</div>
-</div>
-<p class="slide">
-	<a href="#" class="btn-slide"></a>
-</p>
-<!-- HEADER
-================================================== -->
-<div class="row">
-	<div class="headerlogo three columns">
-		<div class="logo">
-			<h4>Jiyun Di</h4>
-		</div>
-	</div>
-	<div class="headermenu nine columns noleftmarg">
-		<nav id="nav-wrap">
-		<ul id="main-menu" class="nav-bar sf-menu">
-			<li class="current">
-			<a href="index.html">Home</a>
-			</li>
-			<li>
-			<a href="rsch.html">Research</a>
-			</li>
-			<li>
-			<a href="PDFs/Jiyun_Di_Resume.pdf">Résumé/CV</a>
-			</li>
-			<li>
-			<a href="TBD.html">Outreach</a>
-			</li>
-			<li>
-			<a href="life.html">Life</a>
-			</li>
-			<li>
-			<a href="TBD.html">简体中文</a>
-			</li>
-		</ul>
-		</nav>
-	</div>
-</div>
-<div class="clear">
-</div>
-<!-- Header ends here. -->
+<!-- Include header -->
+<div id="header"></div>
 
 <!-- SLIDER 
 ================================================== -->
@@ -114,9 +61,9 @@
 ================================================== -->
 <div id="subheader">
 	<div class="row">
-		<p class="text-center"><bold>Welcome to Jiyun's webpage!</bold></p>
+		<p class="text-center" style="font-family: StarRail">Welcome!</p>
 		<div class="twelve columns">
-			<p class="text-center">Jiyun Di (邸基耘, listen: <a href="djy.mp3">Dǐ Jīyún <img alt="" src="images/Loudspeaker_white.png" decoding="async" width="13" height="11" srcset="images/Loudspeaker_white.png 1.5x, images/Loudspeaker_white.png 2x" data-file-width="20" data-file-height="20">, dee JEE-yee-en)</a> is a graduate student at <bold>Department of Physics and Astronomy, Stony Brook University.</bold></p>
+			<p class="text-center">Jiyun Di (邸基耘, listen: <a href="djy.mp3">Dǐ Jīyún <img alt="" src="images/Loudspeaker_white.png" decoding="async" width="13" height="11" srcset="images/Loudspeaker_white.png 1.5x, images/Loudspeaker_white.png 2x" data-file-width="20" data-file-height="20">, dee JEE-yee-en)</a> is a graduate student at Department of Physics and Astronomy, Stony Brook University.</p>
 		</div>
 	</div>
 </div>
@@ -124,12 +71,12 @@
 <!-- ----------------  Notice ------------------- -->
 <div class="textbox">
 	<strong>--- My office ---</strong><br>
-<strong>D-126</strong>, Department of Physics and Astronomy,<br>
+	<strong>D-126</strong>, Department of Physics and Astronomy,<br>
 	Stony Brook, NY 11794-3800<br>
 	<br>
   	<strong>--- Walk-in office hours ---</strong><br>
-	(Updated 2023-04-25)<br>
-	<strong>2 pm to 6 pm on weekdays</strong><br>
+	(Updated 2024-03-08)<br>
+	<strong>Temporarily Unavailable</strong><br>
 	(but also depend on lunch time and emergencies)<br>
 	Reserved by sending email to <strong>jiyun.di@stonybrook.edu</strong><br>
 	or via <a href="https://stonybrook.zoom.us/j/7749633173">my Zoom session</a><br>
@@ -159,7 +106,7 @@
 			</a>
 			</li>
 			<li>
-			<a href="#">
+			<a href="TBD.html">
 			<span class="ca-icon">✦</span>
 			<div class="ca-content">
 				<h2 class="ca-main">Outreach</h2>
@@ -179,22 +126,9 @@
 		</ul>
 	</div>
 </div>
-<!-- FOOOTER 
-================================================== -->
+
+<!-- Include footer -->
 <div id="footer">
-	<footer class="row">
-	<p class="back-top floatright">
-		<a href="#top"><span></span></a>
-	</p>
-	<div style="margin-left:15px;">
-		<h1>Contact</h1>
-		<p>&nbsp;</p>
-		<p><bold>E-mail:</bold> jiyundi@email.arizona.edu</p>
-		<p><bold>Communication Address:</bold> Steward Observatory, 933 N Cherry Ave Tucson, AZ 85719, USA</p>
-		<p><bold>Phone:</bold> +1 (520) 304-7366</p>
-		<p><bold>WeChat:</bold> DI_Jiyun1998</p>
-	</div>
-	</footer>
 </div>
 <div class="copyright">
 	<div class="row">
@@ -206,9 +140,27 @@
 		</div>
 	</div>
 </div>
+
 <!-- JAVASCRIPTS 
 ================================================== -->
 <!-- Javascript files placed here for faster loading -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script>
+    // Load and render header template
+    fetch('website_header.html')
+        .then(response => response.text())
+        .then(template => {
+            const headerTemplate = Handlebars.compile(template);
+            document.getElementById('header').innerHTML = headerTemplate();
+        });
+    // Load and render footer template
+    fetch('website_footer.html')
+        .then(response => response.text())
+        .then(template => {
+            const footerTemplate = Handlebars.compile(template);
+            document.getElementById('footer').innerHTML = footerTemplate();
+        });
+</script>
 <script src="javascripts/foundation.min.js"></script>   
 <script src="javascripts/jquery.easing.1.3.js"></script>
 <script src="javascripts/elasticslideshow.js"></script>

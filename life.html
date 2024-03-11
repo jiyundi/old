@@ -24,58 +24,10 @@
   <![endif]-->
 </head>
 <body>
-<!-- HIDDEN PANEL 
-================================================== -->
-<div id="panel">
-	<div class="row">
-		<div class="twelve columns">
-			<img src="images/settings.png" class="pics" alt="info">
-			<div class="infotext">
-				 Last Updated: Jul 6, 2022
-			</div>
-		</div>
-	</div>
-</div>
-<p class="slide">
-	<a href="#" class="btn-slide"></a>
-</p>
-<!-- HEADER
-================================================== -->
-<div class="row">
-	<div class="headerlogo four columns">
-		<div class="logo">
-			<a href="index.html">
-			<h4>Jiyun Di</h4>
-			</a>
-		</div>
-	</div>
-	<div class="headermenu eight columns noleftmarg">
-		<nav id="nav-wrap">
-		<ul id="main-menu" class="nav-bar sf-menu">
-			<li class="current">
-			<a href="index.html">Home</a>
-			</li>
-			<li>
-			<a href="rsch.html">Research</a>
-			</li>
-			<li>
-			<a href="Jiyun_Di_Resume.pdf">Résumé/CV</a>
-			</li>
-			<li>
-			<a href="TBD.html">Outreach</a>
-			</li>
-			<li>
-			<a href="life.html">Life</a>
-			</li>
-			<li>
-			<a href="TBD.html">简体中文</a>
-			</li>
-		</ul>
-		</nav>
-	</div>
-</div>
-<div class="clear">
-</div>
+
+<!-- Include header -->
+<div id="header"></div>
+
 <!-- SUBHEADER
 ================================================== -->
 <div id="subheader">
@@ -127,22 +79,9 @@
 		</ul>
 	</div>
 </div>
-<!-- FOOOTER 
-================================================== -->
+
+<!-- Include footer -->
 <div id="footer">
-	<footer class="row">
-	<p class="back-top floatright">
-		<a href="#top"><span></span></a>
-	</p>
-	<div style="margin-left:15px;">
-		<h1>Contact</h1>
-		<p>&nbsp;</p>
-		<p><bold>E-mail:</bold> jiyundi@email.arizona.edu</p>
-		<p><bold>Communication Address:</bold> Steward Observatory, 933 N Cherry Ave Tucson, AZ 85719, USA</p>
-		<p><bold>Phone:</bold> +1 (520) 304-7366</p>
-		<p><bold>WeChat:</bold> DI_Jiyun1998</p>
-	</div>
-	</footer>
 </div>
 <div class="copyright">
 	<div class="row">
@@ -154,9 +93,27 @@
 		</div>
 	</div>
 </div>
+
 <!-- JAVASCRIPTS 
 ================================================== -->
 <!-- Javascript files placed here for faster loading -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script>
+    // Load and render header template
+    fetch('website_header.html')
+        .then(response => response.text())
+        .then(template => {
+            const headerTemplate = Handlebars.compile(template);
+            document.getElementById('header').innerHTML = headerTemplate();
+        });
+    // Load and render footer template
+    fetch('website_footer.html')
+        .then(response => response.text())
+        .then(template => {
+            const footerTemplate = Handlebars.compile(template);
+            document.getElementById('footer').innerHTML = footerTemplate();
+        });
+</script>
 <script src="javascripts/foundation.min.js"></script>   
 <script src="javascripts/jquery.easing.1.3.js"></script>
 <script src="javascripts/elasticslideshow.js"></script>
@@ -169,5 +126,7 @@
 <script src="javascripts/hoverIntent.js"></script>
 <script src="javascripts/superfish.js"></script>
 <script src="javascripts/responsivemenu.js"></script>
+
+
 </body>
 </html>

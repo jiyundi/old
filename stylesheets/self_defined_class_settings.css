@@ -22,14 +22,13 @@
 /* ---- 4 ---- */
 .texttablerowheader 
 	{	width: 20%;
-		background: #CCCCCC; 
-		color: #444;
+		background: #a0a774; 
+		color: rgba(255,255,255,1.00);
 		text-align: center;
 		vertical-align: bottom;
 		float: left; 
 		min-height: 15px; 
 		padding: 10px 0px;
-		font-family: 'bahnschrift';
 		font-weight: bold;
 		font-size: 18px;
 		/*border: 2px solid #000000;
@@ -48,8 +47,8 @@
 		vertical-align: bottom;
 		float: left; 
 		padding: 0px 20px; 
-		font-family: 'bahnschrift';
-		border: 2px solid #CCCCCC;
+		font-family: 'HarmonyOS';
+		border: 2px solid #a0a774;
 		/*font-family: 'Consolas'; 
 		margin-bottom: 15px; 
 		margin-top: 15px;*/
@@ -61,11 +60,13 @@
 /* ---- 6 ---- */
 .textbox{background: #fff59d;
 	border-top: 0px solid #fff59d; 
-	color: #444;
+	color: rgba(0,0,0,1.00);
   	border: 0px solid;
 	outline: 0px solid #BDAC59;
   	padding: 20px 50px;
-	font-size: 15px;
+	font-family: HarmonyOS;
+	font-size: 18px;
+	line-height: 24px;
 	text-align: center;
 }
 .textbox a {color: #004a9f;text-decoration-line: underline;text-decoration-style: solid;} /*hyperlink*/
