@@ -1225,11 +1225,11 @@ a.tags, .tags a {color:#fff;}
 	opacity: 0;
 	z-index: 999;
 	max-width: 100%;
-	-webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+	-webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 	-webkit-box-reflect: 
         below 0px -webkit-gradient(
             linear, 
